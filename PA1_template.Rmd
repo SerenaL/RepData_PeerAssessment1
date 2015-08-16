@@ -13,7 +13,8 @@ library(ggplot2)
 
 
 ```{r} 
-data <- read.csv("activity.csv/activity.csv", header = TRUE, colClasses = c("integer", "Date", "integer"))
+unzip("activity.zip",exdir="activity")
+data <- read.csv("activity/activity.csv", header = TRUE, colClasses = c("integer", "Date", "integer"))
 datan <- na.omit(data)
 head(datan)
 ```

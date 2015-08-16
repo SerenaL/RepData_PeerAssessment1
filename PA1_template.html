@@ -79,7 +79,8 @@ img {
 <pre class="r"><code>library(ggplot2)</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<pre class="r"><code>data &lt;- read.csv(&quot;activity.csv/activity.csv&quot;, header = TRUE, colClasses = c(&quot;integer&quot;, &quot;Date&quot;, &quot;integer&quot;))
+<pre class="r"><code>unzip(&quot;activity.zip&quot;,exdir=&quot;activity&quot;)
+data &lt;- read.csv(&quot;activity/activity.csv&quot;, header = TRUE, colClasses = c(&quot;integer&quot;, &quot;Date&quot;, &quot;integer&quot;))
 datan &lt;- na.omit(data)
 head(datan)</code></pre>
 <pre><code>##     steps       date interval
